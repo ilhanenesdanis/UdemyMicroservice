@@ -1,3 +1,4 @@
+using Catalog.API.Features.Categories;
 using Catalog.API.Options;
 using Catalog.API.Repositories;
 
@@ -10,6 +11,8 @@ builder.Services.AddOptionsExtension();
 builder.Services.AddDatabaseServiceExtension();
 
 var app = builder.Build();
+
+app.AddCategoryGroupEndpointExt();
 
 if (app.Environment.IsDevelopment())
 {
